@@ -1,0 +1,52 @@
+.container{
+border:2px solid red;
+display:flex;
+/* flex-direction:row; */
+/* flex-direction:row-reverse;kutu üzerindeki siralama 1,2,3 iken 3,2,1 oluyor. ve sag tarafa yasliyor. */
+/* flex-direction:column-reverse;yukaridan asagi 3,2,1 sewklinde siraliyor kutuöari. */
+flex-wrap:wrap;/* sayfaya sigmayan kutucuklari asagi göndermek icin flex-wrap:wrap; özelligi kullanilir.*/
+/* flex-direction:column; */
+/* justify-content:flex-start; */
+/* justify-content:flex-end; */
+/* justify-content:center; *//*bunun ile align-items:center birlikte kullanmak en iyisidir.EGER BIR KUTUCUK VARSA DA BUNU O DIV ICINDE TAM ORTAYA KOYMAK ISTERSEK YINE JUSTIFY-CONTENT.CENTER, ILE ALIGN-CONTENT.CENTER KULLANMAK GEREKIR:*/
+/* align-items:center; normalde bunu stretch ile genisligi yayiyor. yani esit hale getiriyor.hepsi üzerinde degisiklik yapar. */
+/* justify-content: center;
+align-content: flex-start;
+height:1000px; */
+
+
+/* justify-content: space-around; */
+/* justify-content:space-between; */
+/* justify-content: space-evenly; */
+
+
+
+/* flex-direction un defaultu rowdur. 
+Justify content main axis üzerinde hizalar. row oldugunda yataydir column oldugunda main dikeydir.*/
+}
+
+
+.flexbox-item{
+    background-color: aqua;
+    width:200px;
+    margin:10px;
+    border:1px solid black;
+
+}
+.item-1{
+
+    min-height:100px;
+    /* align-self:flex-start;kutucugu yukari aldi. */
+    order:3;
+}
+
+.item-2{
+
+    min-height:200px;
+    /* align-self:flex-end;Bu özellikle align-items:center in genelleyici özelligi ortadan kaldirilip bireysel hareket ettirebiliyoruz.nesneleri. */
+    order:1; /*kutucuklarin yerlerini istedigimiz gibi degistirebiliyoruz. burada item-2 ilk sirada yer alsin demek istenmis. nadir kullanilan bir özelliktir. */
+}
+.item-3{
+    min-height:300px;
+    order:2;
+}
